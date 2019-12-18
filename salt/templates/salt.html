@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <div class="header">
+        <header>
+
+            <h1>Salting!</h1>
+        </header>
+    </div>
+    <title>Salting!</title>
+    <link rel="stylesheet" href="salt.css">
+    <script>
+        function redirect() {
+            window.location("/");
+            return false;
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('https://www.bu.edu/cs/files/2017/03/giphy.gif');
+            background-position: down 40px;
+            background-repeat: no-repeat;
+        }
+        
+        header {
+            text-align: center;
+            color: rgb(14, 119, 14);
+            font-size: 40px;
+            text-decoration: underline;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        form {
+            text-align: center;
+            padding: 40px;
+            background-image: url('https://www.macmillandictionary.com/external/slideshow/full/White_full.png');
+            height: 301px;
+            width: 701px;
+            border-radius: 20px;
+            left: 200px;
+        }
+        
+        #label1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 50px;
+            font-size: 30px;
+            position: relative;
+            right: -10px;
+        }
+        
+        #label2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 40px;
+            font-size: 30px;
+            position: relative;
+            left: 6px;
+        }
+        
+        #button {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(29, 2, 18);
+        }
+        
+        #input1 {
+            width: 500px;
+            border: 0px;
+            border-bottom: 1px solid black;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+        
+        #input2 {
+            width: 500px;
+            position: relative;
+            left: 0px;
+            border: 0px;
+            border-bottom: 1px solid black;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+        
+        #list {
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .box {
+            border: 8px solid rgb(14, 119, 14);
+            height: 380px;
+            width: 780px;
+            position: relative;
+            left: 350px;
+            border-radius: 30px;
+        }
+        
+        box:hover {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6rFTY9vIVJ982Hr7hewhHs-YGApfaxmtFyLZM5Uh-PI0NIPc');
+            background-color: blueviolet;
+        }
+        
+        #innerlist {
+            text-align: center;
+        }
+        
+        ul:hover {
+            background-color: rgb(14, 119, 14);
+            border-radius: 20px;
+        }
+        
+        input[type=submit] {
+            border-radius: 20px;
+            border-color: white;
+            background-color: rgb(14, 119, 14);
+            width: 400px;
+        }
+        
+        input[type="text"] {
+            font-size: 24px;
+        }
+        
+        a:link {
+            color: rgb(14, 119, 14);
+            font-size: 35px;
+            position: relative;
+            align-content: center;
+            border: 3px solid rgb(14, 119, 14);
+            background-color: rgb(14, 119, 14);
+            right: 7.5cm;
+            bottom: 14.3cm;
+            border-radius: 10px;
+        }
+        
+        img {
+            width: 45px;
+            height: 45px;
+            position: relative;
+            right: 9cm;
+            bottom: 643px;
+            border: 0px solid rgb(14, 119, 14);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+
+    <div class="box">
+
+        <form method="POST">
+            {% csrf_token %}
+            <label id="label1">Username: </label> <input type="text" name="username" id="input1" autocomplete="off"><br>
+
+            <label id="label2">Password: </label> <input type="text" name="password" id="input2" autocomplete="off"><br><br>
+
+
+            <input type="submit" value="Submit" id="button" onclick="redirect()">
+
+
+
+        </form>
+
+
+
+        <ul id="list">
+
+            <li id="innerlist">
+                {{ salting }}
+            </li>
+
+
+        </ul>
+
+
+        <div id="linknew">
+            <a href="login/" target="_blank"> Information Page</a><br><br>
+
+            <a id="secondlink" href="admin/" target="_blank"> Admin Page</a>
+        </div>
+        <div id="icon1">
+            <img src="https://media.giphy.com/media/l4FGroaKiE5uuMBiM/giphy.gif"><br><br>
+            <img src="https://media.giphy.com/media/IwSG1QKOwDjQk/giphy.gif">
+        </div>
+
+</body>
+
+
+</html>

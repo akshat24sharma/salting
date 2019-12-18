@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <header>
+        <strong>Information Page</strong>
+    </header>
+    <title>login</title>
+    <style>
+        body {
+            background-image: url('https://www.bu.edu/cs/files/2017/03/giphy.gif');
+            background-position: down 40px;
+            background-repeat: no-repeat;
+        }
+        
+        header {
+            text-align: center;
+            color: rgb(14, 119, 14);
+            font-size: 60px;
+            text-decoration: underline;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        a:link {
+            color: rgb(14, 119, 14);
+            position: relative;
+            bottom: 3cm;
+            font-size: 30px;
+            border: 4px solid rgb(14, 119, 14);
+            border-radius: 10px;
+            background-color: lightgreen;
+            left: 2cm;
+        }
+        
+        ul {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(14, 119, 14);
+            font-size: 28px;
+            text-align: center;
+            border: 10px solid rgb(14, 119, 14);
+            border-radius: 20px;
+            background-color: lightgreen;
+            position: relative;
+            top: 100px;
+        }
+        
+        img {
+            width: 45px;
+            height: 45px;
+            position: relative;
+            bottom: 2.6cm;
+            right: 10px;
+            border: 0px;
+            border-radius: 8px;
+            right: 3.5cm;
+        }
+        
+        #pic {
+            position: relative;
+            top: 3cm;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="pic">
+        <a href="/">Home Page</a>
+        <img src="https://media.giphy.com/media/xUPGGuzpmG3jfeYWIg/giphy.gif">
+    </div>
+
+    <ul>
+        {% for pass in user1 %}
+
+        <li>{{pass}}</li>
+        {% endfor %}
+
+    </ul>
+
+
+</body>
+
+</html>
